@@ -56,14 +56,26 @@ class ViewController: UIViewController {
         *  跳的好萌，适合做宠物弹跳动画  usingSpringWithDamping：0-1 :0.1的时候抽风一样，1的时候好萌啊 
         *  一步步下去，越来越萌。。。
         */
-        UIView.animateWithDuration(0.5, delay: 0.5, usingSpringWithDamping: 1, initialSpringVelocity: 0.5, options: .Repeat | .Autoreverse , animations: { () -> Void in
-            self.basicSqure.center.y -= self.view.frame.height
-            self.basicSqure.alpha = 1.0 //原来直接设置为1.会从0开始做动画。。不用管初始值啊
-            self.basicSqure.bounds.size.width += 70
-            self.basicSqure.center = CGPoint(x: 40.0, y: -self.view.frame.size.height/2)
-        }, completion: nil)
+//        UIView.animateWithDuration(0.5, delay: 0.5, usingSpringWithDamping: 1, initialSpringVelocity: 0.5, options: .Repeat | .Autoreverse , animations: { () -> Void in
+//            self.basicSqure.center.y -= self.view.frame.height
+//            self.basicSqure.alpha = 1.0 //原来直接设置为1.会从0开始做动画。。不用管初始值啊
+//            self.basicSqure.bounds.size.width += 70
+////            self.basicSqure.center = CGPoint(x: 40.0, y: -self.view.frame.size.height/2)
+//        }, completion: nil)
+        
+        /**
+        
+        */
+        UIView.animateWithDuration(5.5, delay: 0.5, usingSpringWithDamping: 1, initialSpringVelocity: 0.5, options: .CurveEaseOut | .TransitionFlipFromBottom | .Repeat, animations: { () -> Void in
+//            self.basicSqure.center.y -= self.view.frame.height
+//            self.basicSqure.hidden = true
+            }, completion: nil)
+        
         
       //结语:差不多就是这样，最后还是比较偏爱弹簧效果，真心不错！！
+        
+        
+        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
